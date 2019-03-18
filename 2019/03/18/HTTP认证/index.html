@@ -79,19 +79,23 @@
 
 
 
-<meta name="description" content="HTTP+加密+认证+完整性保护 = HTTPS  HTTP通信接口部分用SSL和TSL协议来代替 通常HTTP直接和TCP通信，当使用SSL时，则先和SSL通信，再由SSL和TCP通信。见下图 SSL是独立于HHTP协议的，其他运行在应用层的SMTP和Telent等协议都可以配合SSL协议来使用  1.共享密钥加密(使用一个密钥）  加密和解密通用一个密钥的方式称为共享密钥加密，也称对称密钥加密">
+<meta name="description" content="Basic认证  浏览器弹出如下对话框，这就是Basic认证 响应内容如下： 用户将账号密码，用”:”分割，然后进行Base64编码，写在首部字段Authorization后，发给服务器 缺点：Base64不是加密处理，等于明文，安全等级不够  DIGEST认证  服务器发送临时质询码给客户端，nonce是随机字符串 客户端首部字段包含账号密码等信息，response就是经过MD5运算过后的密码字">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTPS详解">
-<meta property="og:url" content="http://jixin.online/2019/03/16/HTTPS详解/index.html">
+<meta property="og:title" content="HTTP认证">
+<meta property="og:url" content="http://jixin.online/2019/03/18/HTTP认证/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="HTTP+加密+认证+完整性保护 = HTTPS  HTTP通信接口部分用SSL和TSL协议来代替 通常HTTP直接和TCP通信，当使用SSL时，则先和SSL通信，再由SSL和TCP通信。见下图 SSL是独立于HHTP协议的，其他运行在应用层的SMTP和Telent等协议都可以配合SSL协议来使用  1.共享密钥加密(使用一个密钥）  加密和解密通用一个密钥的方式称为共享密钥加密，也称对称密钥加密">
+<meta property="og:description" content="Basic认证  浏览器弹出如下对话框，这就是Basic认证 响应内容如下： 用户将账号密码，用”:”分割，然后进行Base64编码，写在首部字段Authorization后，发给服务器 缺点：Base64不是加密处理，等于明文，安全等级不够  DIGEST认证  服务器发送临时质询码给客户端，nonce是随机字符串 客户端首部字段包含账号密码等信息，response就是经过MD5运算过后的密码字">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.imgur.com/o5r82p0.png">
-<meta property="og:updated_time" content="2019-03-16T13:17:26.600Z">
+<meta property="og:image" content="https://i.imgur.com/7vzDhVF.png">
+<meta property="og:image" content="https://i.imgur.com/Yd67msv.png">
+<meta property="og:image" content="https://i.imgur.com/rrO32T3.png">
+<meta property="og:image" content="https://i.imgur.com/zEiZYkl.png">
+<meta property="og:image" content="https://i.imgur.com/9p1O65v.png">
+<meta property="og:updated_time" content="2019-03-18T13:33:46.233Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTPS详解">
-<meta name="twitter:description" content="HTTP+加密+认证+完整性保护 = HTTPS  HTTP通信接口部分用SSL和TSL协议来代替 通常HTTP直接和TCP通信，当使用SSL时，则先和SSL通信，再由SSL和TCP通信。见下图 SSL是独立于HHTP协议的，其他运行在应用层的SMTP和Telent等协议都可以配合SSL协议来使用  1.共享密钥加密(使用一个密钥）  加密和解密通用一个密钥的方式称为共享密钥加密，也称对称密钥加密">
-<meta name="twitter:image" content="https://i.imgur.com/o5r82p0.png">
+<meta name="twitter:title" content="HTTP认证">
+<meta name="twitter:description" content="Basic认证  浏览器弹出如下对话框，这就是Basic认证 响应内容如下： 用户将账号密码，用”:”分割，然后进行Base64编码，写在首部字段Authorization后，发给服务器 缺点：Base64不是加密处理，等于明文，安全等级不够  DIGEST认证  服务器发送临时质询码给客户端，nonce是随机字符串 客户端首部字段包含账号密码等信息，response就是经过MD5运算过后的密码字">
+<meta name="twitter:image" content="https://i.imgur.com/7vzDhVF.png">
 
 
 
@@ -121,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://jixin.online/2019/03/16/HTTPS详解/">
+  <link rel="canonical" href="http://jixin.online/2019/03/18/HTTP认证/">
 
 
 
 
 
-  <title>HTTPS详解 | 博客</title>
+  <title>HTTP认证 | 博客</title>
   
 
 
@@ -234,7 +238,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/16/HTTPS详解/">
+    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/18/HTTP认证/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ji Xin">
@@ -251,7 +255,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTTPS详解</h1>
+          <h1 class="post-title" itemprop="name headline">HTTP认证</h1>
         
 
         <div class="post-meta">
@@ -263,8 +267,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-16T21:13:19+08:00">
-                2019-03-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T21:33:46+08:00">
+                2019-03-18
               </time>
             
 
@@ -323,40 +327,29 @@
       
 
       
-        <p><strong>HTTP+加密+认证+完整性保护 = HTTPS</strong></p>
+        <p><strong>Basic认证</strong></p>
 <ul>
-<li>HTTP通信接口部分用SSL和TSL协议来代替</li>
-<li>通常HTTP直接和TCP通信，当使用SSL时，则先和SSL通信，再由SSL和TCP通信。见下图<br><img src="https://i.imgur.com/o5r82p0.png" alt></li>
-<li>SSL是独立于HHTP协议的，其他运行在应用层的SMTP和Telent等协议都可以配合SSL协议来使用</li>
+<li>浏览器弹出如下对话框，这就是Basic认证<br><img src="https://i.imgur.com/7vzDhVF.png" alt></li>
+<li>响应内容如下：<br><img src="https://i.imgur.com/Yd67msv.png" alt></li>
+<li>用户将账号密码，用”:”分割，然后进行Base64编码，写在首部字段Authorization后，发给服务器<br><img src="https://i.imgur.com/rrO32T3.png" alt></li>
+<li><strong>缺点：</strong>Base64不是加密处理，等于明文，安全等级不够</li>
 </ul>
-<p><strong>1.共享密钥加密(使用一个密钥）</strong></p>
+<p><strong>DIGEST认证</strong></p>
 <ul>
-<li>加密和解密通用一个密钥的方式称为共享密钥加密，也称<strong>对称密钥加密</strong></li>
-<li>以共享密钥方式加密时<font color="red">必须把密钥发给对方</font></li>
-<li>转发密钥，可能被监听，失去加密意义</li>
+<li>服务器发送临时<strong>质询码</strong>给客户端，nonce是随机字符串<br><img src="https://i.imgur.com/zEiZYkl.png" alt></li>
+<li>客户端首部字段包含账号密码等信息，response就是经过MD5运算过后的密码字符串<br><img src="https://i.imgur.com/9p1O65v.png" alt></li>
+<li><strong>缺点：</strong>安全性高于Basic认证，但不能防止客户伪装</li>
 </ul>
-<p><strong>2.公开密钥加密（使用两个密钥）</strong></p>
+<p><strong>SSL客户端认证</strong></p>
 <ul>
-<li>一对非对称的密钥，一个公开密钥，另一个私有密钥</li>
-<li>发送密文的人用对方的<font color="red">公开密钥加密</font>处理，对方收到后用<font color="red">私有密钥解密</font></li>
+<li>服务器要求客户端提供客户端证书</li>
+<li>客户端发送证书信息</li>
+<li>证书验证通过后，领取客户的公开密钥，进行HTTPS加密通信</li>
+<li><strong>另外：</strong>一般和表单认证组合使用，形成双因素认证。一方面验证账户和密码，一方面认证客户端计算机</li>
 </ul>
-<p><strong>3.HTTPS使用混合加密机制（因为公开密钥加密处理比较复杂）</strong></p>
+<p><strong>基于表单认证</strong></p>
 <ul>
-<li>公开加密方式交换在稍后的共享密钥加密要用到的密钥</li>
-<li>之后用共享加密方式进行通信</li>
-</ul>
-<p><strong><font color="red">公开密钥的正确性很关键</font></strong></p>
-<ul>
-<li>使用由数字证书认证机构（CA)和其他机构颁发的公开密钥证书</li>
-<li>服务器把公开密钥登陆至数字认证机构</li>
-<li>数字认证机构用自己的私有密钥向服务器的公开密钥进行数字签名并颁发公钥证书</li>
-<li>客户端拿到公钥证书后，用数字证书机构的公开密钥进行验证，已确定证书的真实性以及认证机构的真实性</li>
-<li>一般，为了认证机构的公开密钥安全转交给客户端，浏览器会事先植入常用的认证机构的公开密钥</li>
-</ul>
-<p><strong>4.SSL的问题：</strong></p>
-<ul>
-<li>SSL消耗网络资源，通信量大</li>
-<li>大量消耗CPU和内存等资源</li>
+<li>并不是在HTTP协议中定义的，由Web应用程序提供</li>
 </ul>
 
       
@@ -382,8 +375,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/16/list中的remove操作使用for in需要注意的/" rel="next" title="list中的remove操作使用for in需要注意的">
-                <i class="fa fa-chevron-left"></i> list中的remove操作使用for in需要注意的
+              <a href="/2019/03/18/朴素的串匹配算法/" rel="next" title="朴素的串匹配算法">
+                <i class="fa fa-chevron-left"></i> 朴素的串匹配算法
               </a>
             
           </div>
@@ -392,8 +385,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/17/链表的反转/" rel="prev" title="链表的反转">
-                链表的反转 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/18/Session和Cookie/" rel="prev" title="Session和Cookie">
+                Session和Cookie <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
