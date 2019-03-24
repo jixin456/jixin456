@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="例如 str = ‘abcdefghijkl’   print str[0:3]   #截取第一位到第三位的字符 print str[:]   #截取字符串的全部字符 print str[6:]   #截取第七个字符到结尾 print str[:-3]   #截取从头开始到倒数第三个字符之前 print str[2]   #截取第三个字符 print str[-1] #截取倒数第一个字符 prin">
+<meta name="description" content="答案：  static表示静态的意思，可以修饰变量或方法 在类中，被修饰的变量为类变量，被修饰的方法称为类方法，随着类的加载而加载，可以在没有创建实例的的情况下调用static方法，最常见的是main方法（程序入口） 静态static方法中不能调用非静态non-static方法，准确地说是不能直接调用non-static方法。但是可以通过将一个对象的引用传入static方法中，再去调用该对象的no">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python字符串截取（切片）">
-<meta property="og:url" content="http://jixin.online/2019/03/12/python字符串截取/index.html">
+<meta property="og:title" content="static关键字">
+<meta property="og:url" content="http://jixin.online/2019/03/24/static关键字和private以及static覆盖问题/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="例如 str = ‘abcdefghijkl’   print str[0:3]   #截取第一位到第三位的字符 print str[:]   #截取字符串的全部字符 print str[6:]   #截取第七个字符到结尾 print str[:-3]   #截取从头开始到倒数第三个字符之前 print str[2]   #截取第三个字符 print str[-1] #截取倒数第一个字符 prin">
+<meta property="og:description" content="答案：  static表示静态的意思，可以修饰变量或方法 在类中，被修饰的变量为类变量，被修饰的方法称为类方法，随着类的加载而加载，可以在没有创建实例的的情况下调用static方法，最常见的是main方法（程序入口） 静态static方法中不能调用非静态non-static方法，准确地说是不能直接调用non-static方法。但是可以通过将一个对象的引用传入static方法中，再去调用该对象的no">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-12T11:05:10.355Z">
+<meta property="og:updated_time" content="2019-03-24T07:03:07.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python字符串截取（切片）">
-<meta name="twitter:description" content="例如 str = ‘abcdefghijkl’   print str[0:3]   #截取第一位到第三位的字符 print str[:]   #截取字符串的全部字符 print str[6:]   #截取第七个字符到结尾 print str[:-3]   #截取从头开始到倒数第三个字符之前 print str[2]   #截取第三个字符 print str[-1] #截取倒数第一个字符 prin">
+<meta name="twitter:title" content="static关键字">
+<meta name="twitter:description" content="答案：  static表示静态的意思，可以修饰变量或方法 在类中，被修饰的变量为类变量，被修饰的方法称为类方法，随着类的加载而加载，可以在没有创建实例的的情况下调用static方法，最常见的是main方法（程序入口） 静态static方法中不能调用非静态non-static方法，准确地说是不能直接调用non-static方法。但是可以通过将一个对象的引用传入static方法中，再去调用该对象的no">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://jixin.online/2019/03/12/python字符串截取/">
+  <link rel="canonical" href="http://jixin.online/2019/03/24/static关键字和private以及static覆盖问题/">
 
 
 
 
 
-  <title>python字符串截取（切片） | 博客</title>
+  <title>static关键字 | 博客</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/12/python字符串截取/">
+    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/24/static关键字和private以及static覆盖问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ji Xin">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python字符串截取（切片）</h1>
+          <h1 class="post-title" itemprop="name headline">static关键字</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-12T19:05:10+08:00">
-                2019-03-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-24T14:47:45+08:00">
+                2019-03-24
               </time>
             
 
@@ -284,8 +284,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
                   </a>
                 </span>
 
@@ -321,18 +321,14 @@
       
 
       
-        <p>例如 str = ‘abcdefghijkl’</p>
-<hr>
+        <p><strong>答案：</strong></p>
 <ul>
-<li>print str[0:3]   #截取第一位到第三位的字符</li>
-<li>print str[:]   #截取字符串的全部字符</li>
-<li>print str[6:]   #截取第七个字符到结尾</li>
-<li>print str[:-3]   #截取从头开始到倒数第三个字符之前</li>
-<li>print str[2]   #截取第三个字符</li>
-<li>print str[-1] #截取倒数第一个字符</li>
-<li><strong>print str[::-1] </strong> #创造一个与原字符串顺序相反的字符串</li>
-<li>print str[-3:-1] #截取倒数第三位与倒数第一位之前的字符</li>
-<li>print str[-3:] #截取倒数第三位到结尾</li>
+<li>static表示静态的意思，可以修饰变量或方法</li>
+<li>在类中，被修饰的变量为类变量，被修饰的方法称为类方法，随着类的加载而加载，可以在没有创建实例的的情况下调用static方法，最常见的是main方法（程序入口）</li>
+<li>静态static方法中不能调用非静态non-static方法，准确地说是不能直接调用non-static方法。但是可以通过将一个对象的引用传入static方法中，再去调用该对象的non-static方法</li>
+<li>在一个类的静态成员中去访问其非静态成员之所以会出错是因为在类的非静态成员不存在的时候类的静态成员就已经存在了，访问一个内存中不存在的东西当然会出错</li>
+<li>static修饰的方法是静态绑定的，方法覆盖的目的是实现多态，是动态绑定，static修饰的方法不需要被覆盖</li>
+<li>被private修饰的方法，是被隐藏的，子类不可见，因此不支持继承以及覆盖</li>
 </ul>
 
       
@@ -358,15 +354,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/03/24/合并两个有序数组/" rel="next" title="合并两个有序数组">
+                <i class="fa fa-chevron-left"></i> 合并两个有序数组
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/13/类的方法和调用/" rel="prev" title="python 类方法的定义和使用">
-                python 类方法的定义和使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
