@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="1) 事务支持  MyISAM不支持事务，而InnoDB支持 MyISAM：强调的是性能，每次查询具有原子性,其执行数度比InnoDB类型更快，但是不提供事务支持 InnoDB：提供事务支持事务，外部键等高级数据库功能。 具有事务(commit)、回滚(rollback)和崩溃修复能力(crash recovery capabilities)的事务安全(transaction-safe (ACID">
+<meta name="description" content="题目：给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 答案：12345678910class Solution:   def lengthOfLongestSubstring(self, s: str) -&amp;gt; int:      st = &amp;#123;&amp;#125;      i,ans = 0,0      for j in range(len(s)):         i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MyISAM和InnoDB的区别">
-<meta property="og:url" content="http://jixin.online/2019/03/18/MyISAM和InnoDB的区别/index.html">
+<meta property="og:title" content="无重复字符的最长子串">
+<meta property="og:url" content="http://jixin.online/2019/03/26/无重复字符的最长子串/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="1) 事务支持  MyISAM不支持事务，而InnoDB支持 MyISAM：强调的是性能，每次查询具有原子性,其执行数度比InnoDB类型更快，但是不提供事务支持 InnoDB：提供事务支持事务，外部键等高级数据库功能。 具有事务(commit)、回滚(rollback)和崩溃修复能力(crash recovery capabilities)的事务安全(transaction-safe (ACID">
+<meta property="og:description" content="题目：给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 答案：12345678910class Solution:   def lengthOfLongestSubstring(self, s: str) -&amp;gt; int:      st = &amp;#123;&amp;#125;      i,ans = 0,0      for j in range(len(s)):         i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-18T07:06:59.846Z">
+<meta property="og:updated_time" content="2019-03-26T04:30:27.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyISAM和InnoDB的区别">
-<meta name="twitter:description" content="1) 事务支持  MyISAM不支持事务，而InnoDB支持 MyISAM：强调的是性能，每次查询具有原子性,其执行数度比InnoDB类型更快，但是不提供事务支持 InnoDB：提供事务支持事务，外部键等高级数据库功能。 具有事务(commit)、回滚(rollback)和崩溃修复能力(crash recovery capabilities)的事务安全(transaction-safe (ACID">
+<meta name="twitter:title" content="无重复字符的最长子串">
+<meta name="twitter:description" content="题目：给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 答案：12345678910class Solution:   def lengthOfLongestSubstring(self, s: str) -&amp;gt; int:      st = &amp;#123;&amp;#125;      i,ans = 0,0      for j in range(len(s)):         i">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://jixin.online/2019/03/18/MyISAM和InnoDB的区别/">
+  <link rel="canonical" href="http://jixin.online/2019/03/26/无重复字符的最长子串/">
 
 
 
 
 
-  <title>MyISAM和InnoDB的区别 | 博客</title>
+  <title>无重复字符的最长子串 | 博客</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/18/MyISAM和InnoDB的区别/">
+    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/26/无重复字符的最长子串/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ji Xin">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MyISAM和InnoDB的区别</h1>
+          <h1 class="post-title" itemprop="name headline">无重复字符的最长子串</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T15:06:59+08:00">
-                2019-03-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T12:30:27+08:00">
+                2019-03-26
               </time>
             
 
@@ -284,8 +284,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mysql/" itemprop="url" rel="index">
-                    <span itemprop="name">Mysql</span>
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -321,44 +321,8 @@
       
 
       
-        <p><strong>1) 事务支持</strong></p>
-<ul>
-<li>MyISAM不支持事务，而InnoDB支持</li>
-<li>MyISAM：强调的是性能，每次查询具有原子性,其执行数度比InnoDB类型更快，但是不提供事务支持</li>
-<li>InnoDB：提供事务支持事务，外部键等高级数据库功能。 具有事务(commit)、回滚(rollback)和崩溃修复能力(crash recovery capabilities)的事务安全(transaction-safe (ACID compliant))型表</li>
-</ul>
-<p><strong>2) AUTO_INCREMENT</strong></p>
-<ul>
-<li>MyISAM：可以和其他字段一起建立联合索引</li>
-<li>InnoDB：InnoDB中必须包含只有该字段的索引</li>
-</ul>
-<p><strong>3） 表锁差异</strong></p>
-<ul>
-<li>MyISAM：只支持表级锁，用户在操作myisam表时，select，update，delete，insert语句都会给表自动加锁</li>
-<li>InnoDB：支持事务和行级锁，是innodb的最大特色。行锁大幅度提高了多用户并发操作的新能。但是InnoDB的行锁，只是在WHERE的主键是有效的，非主键的WHERE都会锁全表的</li>
-</ul>
-<p><strong>4) 全文索引</strong></p>
-<ul>
-<li>MyISAM：支持(FULLTEXT类型的)全文索引</li>
-<li>InnoDB：不支持(FULLTEXT类型的)全文索引，但是innodb可以使用sphinx插件支持全文索引，并且效果更好</li>
-</ul>
-<p><strong>5)查询或插入更新操作</strong></p>
-<ul>
-<li>MyISAM：如果执行大量的SELECT，MyISAM是更好的选择</li>
-<li>InnoDB：如果你的数据执行大量的INSERT或UPDATE，出于性能方面的考虑，应该使用InnoDB表</li>
-</ul>
-<p><strong>6) 外键</strong></p>
-<ul>
-<li>MyISAM：不支持</li>
-<li>InnoDB：支持</li>
-</ul>
-<p>但是实际场景中，针对具体问题需要具体分析，一般而言可以遵循以下几个问题：</p>
-<ul>
-<li>数据库是否有外键？ </li>
-<li>是否需要事务支持？ </li>
-<li>是否需要全文索引？ </li>
-<li>数据库经常使用什么样的查询模式？</li>
-</ul>
+        <p><strong>题目：</strong><br>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
+<p><strong>答案：</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">      st = &#123;&#125;</span><br><span class="line">      i,ans = <span class="number">0</span>,<span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> range(len(s)):</span><br><span class="line">         <span class="keyword">if</span> s[j] <span class="keyword">in</span> st:</span><br><span class="line">            i = max(st[s[j]],i)</span><br><span class="line">         ans = max(ans,j<span class="number">-1</span>+<span class="number">1</span>)</span><br><span class="line">         st[s[j]] = j+<span class="number">1</span></span><br><span class="line">      <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -383,8 +347,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/GET和POST的区别/" rel="next" title="GET和POST的区别">
-                <i class="fa fa-chevron-left"></i> GET和POST的区别
+              <a href="/2019/03/25/两数相加/" rel="next" title="两数相加">
+                <i class="fa fa-chevron-left"></i> 两数相加
               </a>
             
           </div>
@@ -393,8 +357,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/18/整数反转/" rel="prev" title="整数反转">
-                整数反转 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/26/最长回文子串/" rel="prev" title="最长回文子串">
+                最长回文子串 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
