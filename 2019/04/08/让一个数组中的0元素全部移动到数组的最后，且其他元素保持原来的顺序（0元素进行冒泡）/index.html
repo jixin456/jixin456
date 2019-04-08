@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="答案：  static表示静态的意思，可以修饰变量或方法 在类中，被修饰的变量为类变量，被修饰的方法称为类方法，随着类的加载而加载，可以在没有创建实例的的情况下调用static方法，最常见的是main方法（程序入口） 静态static方法中不能调用非静态non-static方法，准确地说是不能直接调用non-static方法。但是可以通过将一个对象的引用传入static方法中，再去调用该对象的no">
+<meta name="description" content="题目：给定一个整数的数组，要求将数组中的所有的0元素移动到数组的最后，其他的元素保持原来的顺序。要求：空间复杂度不能超过O(1)example：给定数组[0,2,0,7]转换后应为[2,7,0,0]输入：第一行输入一个数组的长度其他的数为数组中元素。 答案1： 12345678910111213141516171819202122while True:    try:        length">
 <meta property="og:type" content="article">
-<meta property="og:title" content="static关键字">
-<meta property="og:url" content="http://jixin.online/2019/03/24/static关键字和private以及static覆盖问题/index.html">
+<meta property="og:title" content="让一个数组中的0元素全部移动到数组的最后，且其他元素保持原来的顺序（0元素进行冒泡）">
+<meta property="og:url" content="http://jixin.online/2019/04/08/让一个数组中的0元素全部移动到数组的最后，且其他元素保持原来的顺序（0元素进行冒泡）/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="答案：  static表示静态的意思，可以修饰变量或方法 在类中，被修饰的变量为类变量，被修饰的方法称为类方法，随着类的加载而加载，可以在没有创建实例的的情况下调用static方法，最常见的是main方法（程序入口） 静态static方法中不能调用非静态non-static方法，准确地说是不能直接调用non-static方法。但是可以通过将一个对象的引用传入static方法中，再去调用该对象的no">
+<meta property="og:description" content="题目：给定一个整数的数组，要求将数组中的所有的0元素移动到数组的最后，其他的元素保持原来的顺序。要求：空间复杂度不能超过O(1)example：给定数组[0,2,0,7]转换后应为[2,7,0,0]输入：第一行输入一个数组的长度其他的数为数组中元素。 答案1： 12345678910111213141516171819202122while True:    try:        length">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-24T07:03:07.201Z">
+<meta property="og:updated_time" content="2019-04-08T06:15:38.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="static关键字">
-<meta name="twitter:description" content="答案：  static表示静态的意思，可以修饰变量或方法 在类中，被修饰的变量为类变量，被修饰的方法称为类方法，随着类的加载而加载，可以在没有创建实例的的情况下调用static方法，最常见的是main方法（程序入口） 静态static方法中不能调用非静态non-static方法，准确地说是不能直接调用non-static方法。但是可以通过将一个对象的引用传入static方法中，再去调用该对象的no">
+<meta name="twitter:title" content="让一个数组中的0元素全部移动到数组的最后，且其他元素保持原来的顺序（0元素进行冒泡）">
+<meta name="twitter:description" content="题目：给定一个整数的数组，要求将数组中的所有的0元素移动到数组的最后，其他的元素保持原来的顺序。要求：空间复杂度不能超过O(1)example：给定数组[0,2,0,7]转换后应为[2,7,0,0]输入：第一行输入一个数组的长度其他的数为数组中元素。 答案1： 12345678910111213141516171819202122while True:    try:        length">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://jixin.online/2019/03/24/static关键字和private以及static覆盖问题/">
+  <link rel="canonical" href="http://jixin.online/2019/04/08/让一个数组中的0元素全部移动到数组的最后，且其他元素保持原来的顺序（0元素进行冒泡）/">
 
 
 
 
 
-  <title>static关键字 | 博客</title>
+  <title>让一个数组中的0元素全部移动到数组的最后，且其他元素保持原来的顺序（0元素进行冒泡） | 博客</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/24/static关键字和private以及static覆盖问题/">
+    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/04/08/让一个数组中的0元素全部移动到数组的最后，且其他元素保持原来的顺序（0元素进行冒泡）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ji Xin">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">static关键字</h1>
+          <h1 class="post-title" itemprop="name headline">让一个数组中的0元素全部移动到数组的最后，且其他元素保持原来的顺序（0元素进行冒泡）</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-24T14:47:45+08:00">
-                2019-03-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-08T14:05:15+08:00">
+                2019-04-08
               </time>
             
 
@@ -284,8 +284,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -321,15 +321,9 @@
       
 
       
-        <p><strong>答案：</strong></p>
-<ul>
-<li>static表示静态的意思，可以修饰变量或方法</li>
-<li>在类中，被修饰的变量为类变量，被修饰的方法称为类方法，随着类的加载而加载，可以在没有创建实例的的情况下调用static方法，最常见的是main方法（程序入口）</li>
-<li>静态static方法中不能调用非静态non-static方法，准确地说是不能直接调用non-static方法。但是可以通过将一个对象的引用传入static方法中，再去调用该对象的non-static方法</li>
-<li>在一个类的静态成员中去访问其非静态成员之所以会出错是因为在类的非静态成员不存在的时候类的静态成员就已经存在了，访问一个内存中不存在的东西当然会出错</li>
-<li>static修饰的方法是静态绑定的，方法覆盖的目的是实现多态，是动态绑定，static修饰的方法不需要被覆盖</li>
-<li>被private修饰的方法，是被隐藏的，子类不可见，因此不支持继承以及覆盖</li>
-</ul>
+        <p><strong>题目：</strong><br>给定一个整数的数组，要求将数组中的所有的0元素移动到数组的最后，其他的元素保持原来的顺序。<br>要求：空间复杂度不能超过O(1)<br>example：<br>给定数组[0,2,0,7]转换后应为[2,7,0,0]<br>输入：<br>第一行输入一个数组的长度<br>其他的数为数组中元素。</p>
+<p><strong>答案1：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        length = int(input(<span class="string">"请输入数组的长度："</span>))</span><br><span class="line">        test = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length):</span><br><span class="line">            atest = int(input(<span class="string">"第"</span>+str(i+<span class="number">1</span>)+<span class="string">"个数："</span>))</span><br><span class="line">            test.append(atest)</span><br><span class="line">        zerocount=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> test:</span><br><span class="line">            <span class="keyword">if</span> n==<span class="number">0</span>:</span><br><span class="line">                zerocount+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> nums <span class="keyword">in</span> range(zerocount):<span class="comment">#控制循环次数</span></span><br><span class="line">            i, j = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> j&lt;=len(test)<span class="number">-1</span>:<span class="comment">#每次循环确定一个0元素的位置</span></span><br><span class="line">                <span class="keyword">if</span> test[i]==<span class="number">0</span> <span class="keyword">and</span> test[j]!=<span class="number">0</span>:</span><br><span class="line">                    temp = test[j]</span><br><span class="line">                    test[j] = test[i]</span><br><span class="line">                    test[i] = temp</span><br><span class="line">                i,j = j,j+<span class="number">1</span></span><br><span class="line">        print(test)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -354,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/24/合并两个有序数组/" rel="next" title="合并两个有序数组">
-                <i class="fa fa-chevron-left"></i> 合并两个有序数组
+              <a href="/2019/04/07/数字跳跃（回溯法）/" rel="next" title="数字跳跃（回溯法）">
+                <i class="fa fa-chevron-left"></i> 数字跳跃（回溯法）
               </a>
             
           </div>
@@ -363,10 +357,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/24/基本数据类型和自动装拆箱/" rel="prev" title="基本数据类型和自动装拆箱">
-                基本数据类型和自动装拆箱 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
