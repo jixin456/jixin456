@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="快慢指针法，若有环，快慢指针必定相遇12345678def hasCycle(head):   slow = fast = head:   while fast and fast.next:      slow = slow.next      fast = fast.next.next      if slow == fast:         return True   return Fals">
+<meta name="description" content="题目：输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 答案1： 12345678910111213141516171819# -*- coding:utf-8 -*-# class TreeNode:#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="判断链表是否有环">
-<meta property="og:url" content="http://jixin.online/2019/03/17/判断链表是否有环/index.html">
+<meta property="og:title" content="从头到尾打印链表">
+<meta property="og:url" content="http://jixin.online/2019/05/08/重建二叉树/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="快慢指针法，若有环，快慢指针必定相遇12345678def hasCycle(head):   slow = fast = head:   while fast and fast.next:      slow = slow.next      fast = fast.next.next      if slow == fast:         return True   return Fals">
+<meta property="og:description" content="题目：输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 答案1： 12345678910111213141516171819# -*- coding:utf-8 -*-# class TreeNode:#">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-17T13:49:20.654Z">
+<meta property="og:updated_time" content="2019-05-08T15:17:06.462Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="判断链表是否有环">
-<meta name="twitter:description" content="快慢指针法，若有环，快慢指针必定相遇12345678def hasCycle(head):   slow = fast = head:   while fast and fast.next:      slow = slow.next      fast = fast.next.next      if slow == fast:         return True   return Fals">
+<meta name="twitter:title" content="从头到尾打印链表">
+<meta name="twitter:description" content="题目：输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 答案1： 12345678910111213141516171819# -*- coding:utf-8 -*-# class TreeNode:#">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://jixin.online/2019/03/17/判断链表是否有环/">
+  <link rel="canonical" href="http://jixin.online/2019/05/08/重建二叉树/">
 
 
 
 
 
-  <title>判断链表是否有环 | 博客</title>
+  <title>从头到尾打印链表 | 博客</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/17/判断链表是否有环/">
+    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/05/08/重建二叉树/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ji Xin">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">判断链表是否有环</h1>
+          <h1 class="post-title" itemprop="name headline">从头到尾打印链表</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T21:49:20+08:00">
-                2019-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-08T23:16:23+08:00">
+                2019-05-08
               </time>
             
 
@@ -284,8 +284,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/剑指Offer/" itemprop="url" rel="index">
+                    <span itemprop="name">剑指Offer</span>
                   </a>
                 </span>
 
@@ -321,7 +321,9 @@
       
 
       
-        <p><strong>快慢指针法，若有环，快慢指针必定相遇</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(head)</span>:</span></span><br><span class="line">   slow = fast = head:</span><br><span class="line">   <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">      slow = slow.next</span><br><span class="line">      fast = fast.next.next</span><br><span class="line">      <span class="keyword">if</span> slow == fast:</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">   <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure></p>
+        <p><strong>题目：</strong><br>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</p>
+<p><strong>答案1：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 返回构造的TreeNode根节点</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reConstructBinaryTree</span><span class="params">(self, pre, tin)</span>:</span></span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> len(pre) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">elif</span> len(pre) == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> TreeNode(pre[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            ret = TreeNode(pre[<span class="number">0</span>])</span><br><span class="line">            ret.left = self.reConstructBinaryTree(pre[<span class="number">1</span>:tin.index(pre[<span class="number">0</span>])+<span class="number">1</span>],tin[:tin.index(pre[<span class="number">0</span>])])</span><br><span class="line">            ret.right = self.reConstructBinaryTree(pre[tin.index(pre[<span class="number">0</span>])+<span class="number">1</span>:],tin[tin.index(pre[<span class="number">0</span>])+<span class="number">1</span>:] )</span><br><span class="line">            <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -346,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/删除排序链表中的重复元素/" rel="next" title="删除排序链表中的重复元素">
-                <i class="fa fa-chevron-left"></i> 删除排序链表中的重复元素
+              <a href="/2019/05/06/SQL语句/" rel="next" title="SQL语句">
+                <i class="fa fa-chevron-left"></i> SQL语句
               </a>
             
           </div>
@@ -355,10 +357,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/17/GET和POST的区别/" rel="prev" title="GET和POST的区别">
-                GET和POST的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
