@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="题目：给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。答案： 1234567def searchInsert(nums,target):   if target&amp;gt;nums[-1]:      return len(nums)        for index_, value_ in enumerate(nums):">
+<meta name="description" content="MVC  视图层(view):用户交互的界面，接受Servlet传递的内容，比如HTML(静态资源）,JSP（动态资源）等 控制层（controller):处理用户的请求，对请求进行转发等 模型层（model):负责业务逻辑和数据的操作，是MVC的核心  JavaWeb三层架构  是javaWeb独有的 分别为：web层，业务逻辑（service)层,数据访问(dao)层 web层：Jsp和Ser">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搜索插入位置">
-<meta property="og:url" content="http://jixin.online/2019/03/19/搜索插入位置/index.html">
+<meta property="og:title" content="JavaWeb三大框架与MVC设计模式">
+<meta property="og:url" content="http://jixin.online/2019/05/28/JavaWeb三大框架与MVC设计模式/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="题目：给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。答案： 1234567def searchInsert(nums,target):   if target&amp;gt;nums[-1]:      return len(nums)        for index_, value_ in enumerate(nums):">
+<meta property="og:description" content="MVC  视图层(view):用户交互的界面，接受Servlet传递的内容，比如HTML(静态资源）,JSP（动态资源）等 控制层（controller):处理用户的请求，对请求进行转发等 模型层（model):负责业务逻辑和数据的操作，是MVC的核心  JavaWeb三层架构  是javaWeb独有的 分别为：web层，业务逻辑（service)层,数据访问(dao)层 web层：Jsp和Ser">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-19T05:53:01.093Z">
+<meta property="og:image" content="https://i.imgur.com/uSqOMGD.png">
+<meta property="og:updated_time" content="2019-05-28T14:58:59.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搜索插入位置">
-<meta name="twitter:description" content="题目：给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。答案： 1234567def searchInsert(nums,target):   if target&amp;gt;nums[-1]:      return len(nums)        for index_, value_ in enumerate(nums):">
+<meta name="twitter:title" content="JavaWeb三大框架与MVC设计模式">
+<meta name="twitter:description" content="MVC  视图层(view):用户交互的界面，接受Servlet传递的内容，比如HTML(静态资源）,JSP（动态资源）等 控制层（controller):处理用户的请求，对请求进行转发等 模型层（model):负责业务逻辑和数据的操作，是MVC的核心  JavaWeb三层架构  是javaWeb独有的 分别为：web层，业务逻辑（service)层,数据访问(dao)层 web层：Jsp和Ser">
+<meta name="twitter:image" content="https://i.imgur.com/uSqOMGD.png">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://jixin.online/2019/03/19/搜索插入位置/">
+  <link rel="canonical" href="http://jixin.online/2019/05/28/JavaWeb三大框架与MVC设计模式/">
 
 
 
 
 
-  <title>搜索插入位置 | 博客</title>
+  <title>JavaWeb三大框架与MVC设计模式 | 博客</title>
   
 
 
@@ -232,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/03/19/搜索插入位置/">
+    <link itemprop="mainEntityOfPage" href="http://jixin.online/2019/05/28/JavaWeb三大框架与MVC设计模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ji Xin">
@@ -249,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">搜索插入位置</h1>
+          <h1 class="post-title" itemprop="name headline">JavaWeb三大框架与MVC设计模式</h1>
         
 
         <div class="post-meta">
@@ -261,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T13:49:54+08:00">
-                2019-03-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T22:40:33+08:00">
+                2019-05-28
               </time>
             
 
@@ -284,8 +286,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
                   </a>
                 </span>
 
@@ -321,8 +323,22 @@
       
 
       
-        <p><strong>题目：</strong><br>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。<br><strong>答案：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span><span class="params">(nums,target)</span>:</span></span><br><span class="line">   <span class="keyword">if</span> target&gt;nums[<span class="number">-1</span>]:</span><br><span class="line">      <span class="keyword">return</span> len(nums)</span><br><span class="line">     </span><br><span class="line">   <span class="keyword">for</span> index_, value_ <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">      <span class="keyword">if</span> target &lt;= value_:</span><br><span class="line">          <span class="keyword">return</span> index_</span><br></pre></td></tr></table></figure>
+        <p><strong>MVC</strong></p>
+<ol>
+<li>视图层(view):用户交互的界面，接受Servlet传递的内容，比如HTML(静态资源）,JSP（动态资源）等</li>
+<li>控制层（controller):处理用户的请求，对请求进行转发等</li>
+<li>模型层（model):负责业务逻辑和数据的操作，是MVC的核心</li>
+</ol>
+<p><strong>JavaWeb三层架构</strong></p>
+<ol>
+<li>是javaWeb独有的</li>
+<li>分别为：web层，业务逻辑（service)层,数据访问(dao)层</li>
+<li>web层：Jsp和Servlet等内容</li>
+<li>业务（service）层：业务逻辑</li>
+<li>数据访问(dao)层：封装了数据访问细节</li>
+</ol>
+<p><strong>二者之间的关系</strong><br><img src="https://i.imgur.com/uSqOMGD.png" alt></p>
+
       
     </div>
     
@@ -346,8 +362,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/18/Session和Cookie/" rel="next" title="Session和Cookie">
-                <i class="fa fa-chevron-left"></i> Session和Cookie
+              <a href="/2019/05/08/重建二叉树/" rel="next" title="重建二叉树">
+                <i class="fa fa-chevron-left"></i> 重建二叉树
               </a>
             
           </div>
@@ -355,10 +371,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/19/报数/" rel="prev" title="报数">
-                报数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
